@@ -42,7 +42,7 @@ namespace LoginUsingMiddleWare.CustomeMiddleWares
                             await context.Response.WriteAsync("Invalid input for 'email'\n");
                         if (password != validPassword)
                             await context.Response.WriteAsync("Invalid input for 'password'\n");
-                        else if (!isValidLogin)
+                        if (!isValidLogin)
                             await context.Response.WriteAsync("Invalid login\n");
                     }
                     else
